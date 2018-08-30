@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MongoDB Commands</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Command</th>
+            <th>Options</th>
+            <th>Example</th>
+            <th>Meaning</th>
+        </tr>
+        <tr>
+            <td>show dbs</td>
+            <td>NA</td>
+            <td>show dbs</td>
+            <td>Displays all existing db schemas</td>
+        </tr>
+        <tr>
+            <td>use {db_schema}</td>
+            <td>NA</td>
+            <td>show test</td>
+            <td>Swictes to test db schema.By default collections are created in test schema</td>
+        </tr>
+        <tr>
+            <td>db.{collection_name}.insertOne({ key1:val1, key2:val2 })</td>
+            <td>NA</td>
+            <td>db.moviesScratch.insertOne({ "_id": "tt0075148", "title": "Rocky", "year": "1976" })</td>
+            <td>Insert one document in the collection</td>
+        </tr>
+        <tr>
+            <td>db.{collection_name}.insertMany([{ key1:val1, key2:val2 }])</td>
+            <td>By default will be inserted in Ordered manner.</td>
+            <td>db.moviesScratch.insertOne([{ "_id": "tt0075148", "title": "Rocky", "year": "1976" }, ])</td>
+            <td>Insert many document in the collection. For dups mongo returns error and inserts uptil dups</td>
+        </tr>
+        <tr>
+            <td>db.{collection_name}.insertMany({ key1:val1, key2:val2 })</td>
+            <td>By default will be inserted in Ordered manner.</td>
+            <td>db.moviesScratch.insertOne([{ "_id": "tt0075148", "title": "Rocky", "year": "1976" }, { "ordered": false }])</td>
+            <td>Insert many document in the collection. For dups mongo returns error and inserts uptil dups</td>
+        </tr>
+                   
+    </table>
+</body>
+</html>
