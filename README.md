@@ -1,2 +1,2 @@
-# mongodb-useful-commands
-frequently used mongodb commands
+# mongodb-university-nodejs 
+mongodb-university-nodejs week wise notes 
